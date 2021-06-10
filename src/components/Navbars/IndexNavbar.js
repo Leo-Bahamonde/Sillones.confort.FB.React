@@ -52,6 +52,7 @@ function IndexNavbar() {
           >
             Inicio
           </NavbarBrand>
+          
           <button
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {
@@ -62,6 +63,8 @@ function IndexNavbar() {
             <span className="navbar-toggler-bar bar1" />
             <span className="navbar-toggler-bar bar2" />
             <span className="navbar-toggler-bar bar3" />
+            
+            
           </button>
         </div>
         <Collapse
@@ -71,6 +74,33 @@ function IndexNavbar() {
         >
           <Nav navbar>
 
+          <NavItem>
+            <NavLink
+                data-placement="bottom"
+                href="/productos"
+                title="productos"
+              >PRODUCTOS
+            </NavLink>
+          </NavItem>
+
+            <NavItem>
+            <NavLink
+                data-placement="bottom"
+                href="/contactos"
+                title="contactos"
+              >CONTACTOS     
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+            <NavLink
+                data-placement="bottom"
+                href="/como-llegar"
+                title="como-llegar"
+              >COMO LLEGAR?
+              </NavLink>
+            </NavItem>
+<hr></hr>
             <NavItem>
             <NavLink
             data-placement="bottom"
@@ -105,7 +135,8 @@ function IndexNavbar() {
                 <i className="fa fa-instagram" />
                 <p className="d-lg-none">Instagram</p>
               </NavLink>
-            </NavItem>     
+            </NavItem> 
+            
           </Nav>
         </Collapse>
       </Container>
@@ -115,14 +146,3 @@ function IndexNavbar() {
 
 export default IndexNavbar;
 
-
-/* <NavItem>
-              <Button
-                className="btn-round"
-                color="danger"
-                href="https://www.creative-tim.com/product/paper-kit-pro-react?ref=pkr-index-navbar"
-                target="_blank"
-              >
-                <i className="nc-icon nc-spaceship"></i> Upgrade to Pro
-              </Button>
-            </NavItem> */

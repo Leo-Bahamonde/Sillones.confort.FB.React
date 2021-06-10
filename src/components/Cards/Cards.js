@@ -13,17 +13,24 @@ const Cards = () => {
     ]
     
     return (
-        <div className="container d-flex justify-content-center align-items-center h-100">
-            <div className="row">
-              {
-                  Card.map(card=>(
-                    <div className="col-md-4" key={card.id}>
-                        <SelectionCard title={card.title} image={card.image} description={card.description} price={card.price}/>
-                    </div>
-                  ))
-              }
+        <div>
+             <div className="ml-auto mr-auto text-center mb-3">
+                <h4>PRODUCTOS DESTACADOS</h4>
+             </div>
+            <div className="container d-flex justify-content-center align-items-center h-100">
+                <div className="row">
+                {
+                    Card.map(card=>(
+                        <div className="col-md-4" key={card.id}>
+                            <SelectionCard title={card.title} image={card.image} description={card.description} price={card.price} value={card.value}/>
+                        </div>
+                    ))
+                }
+                </div>
             </div>
+        
         </div>
     )
 }
 export default Cards
+

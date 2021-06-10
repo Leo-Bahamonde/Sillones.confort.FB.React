@@ -12,8 +12,10 @@ import DemoFooter from "components/Footers/DemoFooter.js";
 import SectionCarousel from "views/index-sections/SectionCarousel.js";
 import SectionDark from "views/index-sections/SectionDark.js";
 import SectionReservation from "views/index-sections/SectionReservation.js";
-import SectionMaps from "views/index-sections/SectionMaps";
-import Cards from "views/index-sections/Cards";
+import Cards from "components/Cards/Cards";
+import WhatsAppIcon from '../components/WhatsAppIcon/WhatsAppIcon'
+
+//css
 
 
 function Index() {
@@ -33,8 +35,9 @@ function Index() {
             <SectionCarousel />         
             <Cards/>             
             <SectionReservation/> 
-            <SectionMaps/>    
+               
             <DemoFooter /> 
+            <WhatsAppIcon/>
         </div>
     </>
   );

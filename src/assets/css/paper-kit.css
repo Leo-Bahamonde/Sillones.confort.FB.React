@@ -1,27 +1,18 @@
-/*!
-presentation-title
- =========================================================
- * Paper Kit React - v1.3.0 based on Paper Kit - v2.2.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/paper-kit-2
- * Copyright 2021 Creative Tim (http://www.creative-tim.com)
-
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-/*      light colors - used for select dropdown         */
-/* ========================================================================
- * bootstrap-switch - v3.3.2
- * http://www.bootstrap-switch.org
- * ========================================================================
- * Copyright 2012-2013 Mattia Larentis
- * http://www.apache.org/licenses/LICENSE-2.0
- */
+/* WHATSAPP */
+.btn-whatsapp {
+  display:block;
+  width:70px;
+  height:70px;
+  color:#fff;
+  position: fixed;
+  right:20px;
+  bottom:20px;
+  border-radius:50%;
+  line-height:80px;
+  text-align:center;
+  z-index:9;
+}
+/*FIN WHATSAPP */
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -4618,7 +4609,7 @@ License - nucleoapp.com/license/
 
 .profile-content {
   position: relative; }
-
+title
 .owner {
   text-align: center; }
 
@@ -6459,3 +6450,31 @@ td.rdtYear:hover {
   border-bottom-color: #fff; }
 
 /*# sourceMappingURL=paper-kit.css.map */
+
+
+
+
+
+
+
+
+
+/* NAVBARS */
+.mapStyles{
+  margin-top: 50px;
+  border: 0;
+}
+
+@media screen and (max-width: 720px) {
+  .mapStyles {
+    box-sizing: content-box;
+    width: 100%;
+    padding: 5px;
+    
+  }
+}
+
+.barra{
+  color: #000;
+  background: #000;
+}
