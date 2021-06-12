@@ -1,16 +1,19 @@
 import React from 'react'
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import IndexNavbar2 from "components/Navbars/IndexNavbarSecondary.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import WhatsAppIcon from 'components/WhatsAppIcon/WhatsAppIcon'
 
 const Products = () => {
+    React.useEffect(()=>{
+        document.title="Nuestros productos"
+    })
     return (
         <div>
-        <IndexNavbar/>
+        <IndexNavbar2/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             PRODUCTOS
-            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <DemoFooter/>
         <WhatsAppIcon/>
         </div>

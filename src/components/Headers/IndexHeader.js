@@ -39,7 +39,7 @@ function IndexHeader() {
         </div>
         <div
           className="moving-clouds"
-          style={{
+          Style={{
             backgroundImage:
               "url(" + require("assets/img/clouds.png").default + ")",
           }}

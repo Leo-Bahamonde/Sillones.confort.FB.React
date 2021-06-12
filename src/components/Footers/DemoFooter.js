@@ -27,7 +27,7 @@ function DemoFooter() {
               <Col className="ml-auto mr-auto text-center" md="6">
                {/* Button trigger modal */}
                <Button
-                 className="btn-round"
+                 className="btn-round m-2"
                  color="danger"
                  outline
                  type="button"
@@ -62,7 +62,7 @@ function DemoFooter() {
              <Col className="ml-auto mr-auto text-center" md="6">
              {/* Button trigger modal */}
              <Button
-               className="btn-round"
+               className="btn-round m-2"
                color="danger"
                outline
                type="button"

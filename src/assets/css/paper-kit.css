@@ -6478,3 +6478,12 @@ td.rdtYear:hover {
   color: #000;
   background: #000;
 }
+
+.navbar-transparent2{
+  background: rgb(255, 255, 255);
+  color: #fff;
+}
+
+.textGuiaTime{
+  float: right;
+}

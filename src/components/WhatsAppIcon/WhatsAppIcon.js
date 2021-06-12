@@ -4,8 +4,8 @@ import './WhatsAppIcon.css'
 const WhatsAppIcon = () => {
     return (
         <div>
-             <a href="https://api.whatsapp.com/send?phone=5491131896414&text=Hola SillonesFB sigue disponibles?" class="float">
-                <i class="fa fa-whatsapp my-float"></i>
+             <a href="https://api.whatsapp.com/send?phone=5491131896414&text=Hola SillonesFB sigue disponibles?" className="float">
+                <i className="fa fa-whatsapp my-float"></i>
             </a> 
         </div>
     )

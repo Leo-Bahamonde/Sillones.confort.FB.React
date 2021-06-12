@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 
 function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent2");/* NO SACAR "navbar-transparent2" */
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
   const toggleNavbarCollapse = () => {
@@ -26,12 +26,12 @@ function IndexNavbar() {
         document.documentElement.scrollTop > 299 ||
         document.body.scrollTop > 299
       ) {
-        setNavbarColor("");
+        setNavbarColor("navbar-transparent2");/* NO SACAR "navbar-transparent2" */
       } else if (
         document.documentElement.scrollTop < 300 ||
         document.body.scrollTop < 300
       ) {
-        setNavbarColor("navbar-transparent");  /* sacar navbar-transparent hace al menu visible siempre  */
+        setNavbarColor("");  /* sacar navbar-transparent hace al menu visible siempre  */
       }
     };
 

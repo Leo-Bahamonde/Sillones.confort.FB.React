@@ -1,4 +1,4 @@
-# Change Log
+<!-- # Change Log
 
 ## [1.3.0] 2021-03-24
 ### Bug fixing
@@ -87,3 +87,4 @@ _Warnings might appear while doing an npm install - they do not affect the UI or
 ### Original Release
 - Added Reactstrap as base framework
 - Added design from Paper Kit 2 by Creative Tim
+ -->

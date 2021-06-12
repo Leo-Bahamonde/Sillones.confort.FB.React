@@ -25,17 +25,17 @@ function Index() {
     return function cleanup() {
       document.body.classList.remove("index");
     };
-  });
+  }); 
   return (
     <>
-      <IndexNavbar />
+      
+      <IndexNavbar/>
       <IndexHeader />
         <div className="main">
         <SectionDark />
             <SectionCarousel />         
             <Cards/>             
-            <SectionReservation/> 
-               
+            <SectionReservation/>       
             <DemoFooter /> 
             <WhatsAppIcon/>
         </div>

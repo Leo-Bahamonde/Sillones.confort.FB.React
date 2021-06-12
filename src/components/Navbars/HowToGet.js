@@ -1,12 +1,15 @@
 import React from 'react'
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import IndexNavbar2 from "components/Navbars/IndexNavbarSecondary";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import WhatsAppIcon from 'components/WhatsAppIcon/WhatsAppIcon'
 import '../../assets/css/paper-kit.css'
 const HowToGet = () => {
+    React.useEffect(()=>{
+        document.title="¿Como llegar?"
+    })
     return (
-        <div className="container text-center ml-auto mr-auto">
-            <IndexNavbar/>
+        <div className="container text-center ml-auto mr-auto pt-5">
+            <IndexNavbar2/>
             <div className="mt-5">
                 <h3>COMO LLEGAR</h3>
             </div>
@@ -16,7 +19,6 @@ const HowToGet = () => {
                     title="hola" 
                     width="800" 
                     height="600" 
-                    allowfullscreen="" 
                     loading="lazy">
                 </iframe>        
             </div>
