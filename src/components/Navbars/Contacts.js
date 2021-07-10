@@ -1,68 +1,141 @@
-import React from 'react'
+import React from 'react';
 import IndexNavbar2 from "components/Navbars/IndexNavbarSecondary.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import WhatsAppIcon from 'components/WhatsAppIcon/WhatsAppIcon'
 import '../../assets/css/paper-kit.css'
+import { useForm } from "react-hook-form";
 
-const Contacts = () => {
-  React.useEffect(()=>{
-    document.title = 'Contactos'
-  })
 
-    return (
-      <div>
-        <div className="container">
-            <IndexNavbar2/>
+function Contacts() {
 
-            <br/><br/><br/><br/>
-            <div className="container text-center">
-            <h3>CONTACTANOS</h3>
-            </div>
-            
-            <div className="pt-5 col-sm-12	col-md-12 col-lg-12	col-xl-6 textGuiaTime">
-            <p>Lunes a Viernes de 9:0 a 13:00 hs y de 14:00 a 16:00 hs / Sábados de 9 a 13:00 hs</p>
-            <p>+54 9 11 3189-6414</p>
-            <p>SillonesFB@Gmail.com</p>
-            <p>San Ramon 6128 entre Monaco y Mar del Plata - Villa Ballester, San Martin</p>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13142.907535889204!2d-58.56581055122808!3d-34.560469882971525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91965d37910cbbe9!2sFabrica%20De%20Sillones!5e0!3m2!1ses!2sar!4v1623356598124!5m2!1ses!2sar" 
-            className="mapStyles"
-            title="hola" 
-            width="600" 
-            height="400" 
-            loading="lazy">
-            </iframe>     
-            </div>
-            
-            <div className="pt-5 col-sm-12	col-md-12 col-lg-6 col-xl-6">
-              <form>
-              <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Nombre</label>
-              <input type="text" className="form-control" id="exampleFormControlInput1"/>
-              </div>
-              <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">mail</label>
-              <input type="mail" className="form-control" id="exampleFormControlInput1"/>
-              </div>
-              <div className="form-group">
-              <label htmlFor="exampleFormControlInput1">Telefono</label>
-              <input type="tel" className="form-control" id="exampleFormControlInput1"/>
-              </div>
-              <div className="form-group">
-              <label htmlFor="exampleFormControlTextarea1">Escribe tu mensaje</label>
-              <textarea className="form-control" id="exampleFormControlTextarea1" rows="14"></textarea>
-              </div>
-              </form>
-            <button className="btn btn-dark">Enviar</button>
-          </div>  
-        </div>
-                  <div>
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+  }; // your form submit function which will invoke after successful validation
+
+  console.log(watch("example"));
+ 
+
+ 
+  return (
+    <div>
+    <div className="container mt-3 p-4">
+    <IndexNavbar2/>
+       <div>
+          <h2>Formulario de contacto</h2>
+       </div>
+
+
+       <div className="mt-4">
+       <form onSubmit={handleSubmit(onSubmit)}>
+
+      <div className="row">
+       
+         <div className=" col-sm-12 col-md-12	col-lg-6	col-xl-6	col-xxl-6 mt-2">
+           <input 
+             type="text"
+             name="name" 
+             className="form-control"
+             placeholder="Nombre"
+             {...register("firstName", {
+              required: true,
+              maxLength: 20,
+              minLength:2,
+              pattern: /^[A-Za-z]+$/i
+            })}
+          />
+          {errors?.firstName?.type === "required" && <p className="text-danger text-small d-block mb-2 text-small d-block mb-2">*Este campo es obligatorio.</p>}
+          {errors?.firstName?.type === "maxLength" && <p className="text-danger text-small d-block mb-2 text-small d-block mb-2">*Maximo 20 caracteres validos</p>}
+          {errors?.firstName?.type === "minLength" && <p className="text-danger text-small d-block mb-2 text-small d-block mb-2">*Minimo 2 caracteres validos</p>}
+          {errors?.firstName?.type === "pattern" && <p className="text-danger text-small d-block mb-2 text-small d-block mb-2">*Caracter no valido</p>}
+         </div>
+
+         <div className="col-sm-12 col-md-12	col-lg-6	col-xl-6	col-xxl-6 mt-2">
+           <input
+               type="text"
+               name="surname" 
+               className="form-control"
+               placeholder="Apellido"
+               {...register("surname", {
+                required: true,
+                maxLength: 30,
+                minLength: 2,
+                pattern: /^[A-Za-z]+$/i
+              })}
+            />
+            {errors?.firstName?.type === "required" && <p className="text-danger text-small d-block mb-2">*Este campo es obligatorio.</p>}
+            {errors?.firstName?.type === "maxLength" && <p className="text-danger text-small d-block mb-2">*Maximo 30 caracteres validos</p>}
+            {errors?.firstName?.type === "minLength" && <p className="text-danger text-small d-block mb-2">*Minimo 2 caracteres validos</p>}
+            {errors?.firstName?.type === "pattern" && <p className="text-danger text-small d-block mb-2">*Caracter no valido</p>}
+         </div>
+         
+
+         <div className="col-sm-12 col-md-12	col-lg-12	col-xl-12	col-xxl-12 mt-2">
+           <input 
+              type="email" 
+              name="email" 
+              className="form-control" 
+              placeholder="Ingrese un E-mail"
+              {...register("email", {
+                required: true,   
+              })}
+            />
+            {errors?.email?.type === "required" && <p className="text-danger text-small d-block mb-2">*Este campo es obligatorio.</p>}
+               
+         </div>
+
+         <div className="col-sm-12 col-md-12	col-lg-12	col-xl-12	col-xxl-12 mt-4">
+           <input 
+             type="tel"
+             name="tel"
+             className="form-control"
+             placeholder="Telefono sin espacios ni guiones"
+             {...register("tel", {
+              pattern:/^([0-9])*$/
+              
+            })}
+          />
+          {errors?.tel?.type === "pattern" && <p className="text-danger text-small d-block mb-2">*Caracter no validos</p>}       
+         </div>
+
+         <div className="col-sm-12 col-md-12	col-lg-12	col-xl-12	col-xxl-12 mt-4 mb-4">
+             <textarea 
+                 className="form-control"
+                 id="exampleFormControlTextarea1" 
+                 placeholder="Escribe aqui tu consulta.."
+                 rows="6"
+                 name="textarea"
+                 {...register("textarea", {
+                  required: true,
+                  maxLength: 500,
+                  minLength: 10
+                })}
+              />
+              {errors?.textarea?.type === "required" && <p className="text-danger text-small d-block mb-2">*Este campo es obligatorio.</p>}
+              {errors?.textarea?.type === "maxLength" && <p className="text-danger text-small d-block mb-2">Maximo 500 caracteres validos</p>} 
+              {errors?.firstName?.type === "minLength" && <p className="text-danger text-small d-block mb-2">*Cuentanos un poco mas</p>} 
+         </div>
+
+         <div >
+             <button type="submit" className="btn btn-primary">Enviar</button>    
+         </div>
+       </div>
+     </form>
+    </div>
+   </div>   
+              <div>
                     <WhatsAppIcon/>
                     <DemoFooter/>  
-                  </div>
+              </div>
+      
       </div>
-            )
-          }
-          
-          export default Contacts
-          
+  );
+}
+
+export default Contacts;

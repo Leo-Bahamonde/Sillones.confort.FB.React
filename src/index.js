@@ -18,7 +18,7 @@ import Products from './components/Navbars/Products'
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/gi" exact>
+      <Route path="/" exact>
         <App/> 
       </Route>
       <Route path="/productos">
